@@ -9,15 +9,15 @@ import tensorflow as tf
 from ..utils import utils
 from tensorflow.python.framework import ops
 from tensorflow.keras.models import load_model
-#from tensorflow.keras.layers import advanced_activations, Activation
+# from tensorflow.keras.layers import advanced_activations, Activation
 
 
-# Register all classes with `advanced_activations` module
-#_ADVANCED_ACTIVATIONS = set()
-#for name, obj in inspect.getmembers(advanced_activations, inspect.isclass):
-#    if not name.startswith("_") and hasattr(obj, "__module__") and obj.__module__ == advanced_activations.__name__:
-#        _ADVANCED_ACTIVATIONS.add(obj)
-#_ADVANCED_ACTIVATIONS = tuple(_ADVANCED_ACTIVATIONS)
+#  Register all classes with `advanced_activations` module
+# _ADVANCED_ACTIVATIONS = set()
+# for name, obj in inspect.getmembers(advanced_activations, inspect.isclass):
+#     if not name.startswith("_") and hasattr(obj, "__module__") and obj.__module__ == advanced_activations.__name__:
+#         _ADVANCED_ACTIVATIONS.add(obj)
+# _ADVANCED_ACTIVATIONS = tuple(_ADVANCED_ACTIVATIONS)
 
 
 def _register_guided_gradient(name):

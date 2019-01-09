@@ -1,8 +1,9 @@
 import pytest
 
-import keras.backend as K
-from keras.layers import Dense
-from keras.models import Sequential
+import tensorflow as tf
+K = tf.keras.backend
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.models import Sequential
 from vis.optimizer import Optimizer
 from vis.losses import Loss
 

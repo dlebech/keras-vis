@@ -4,13 +4,14 @@ import numpy as np
 from vis.backend import modify_model_backprop
 from vis.utils.test_utils import skip_backends
 
-import keras
-from keras.models import Model, Input, Sequential
-from keras.layers import Dense
-from keras.initializers import Constant
-from keras import backend as K
-from keras.activations import get
-from keras.layers import advanced_activations, Activation
+import tensorflow as tf
+keras = tf.keras
+from tensorflow.keras.models import Model, Sequential
+from tensorflow.keras.layers import Dense, Input
+from tensorflow.keras.initializers import Constant
+from tensorflow.keras import backend as K
+from tensorflow.keras.activations import get
+from tensorflow.keras.layers import Activation
 
 
 def _compute_grads(model, input_array):
