@@ -4,8 +4,8 @@ import numpy as np
 from scipy.ndimage.interpolation import zoom
 
 import tensorflow as tf
-from tensorflow.keras.layers.convolutional import _Conv
-from tensorflow.keras.layers.pooling import _Pooling1D, _Pooling2D, _Pooling3D
+from tensorflow.keras.layers.convolutional import Conv
+from tensorflow.keras.layers.pooling import Pooling1D, Pooling2D, Pooling3D
 from tensorflow.keras.layers.wrappers import Wrapper
 K = tf.keras.backend
 
