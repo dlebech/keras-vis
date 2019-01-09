@@ -1,17 +1,8 @@
 sudo: required
-dist: trusty
 language: python
-matrix:
-    include:
-        - python: 2.7
-          env: KERAS_BACKEND=tensorflow TEST_MODE=PEP8
-        - python: 2.7
-          env: KERAS_BACKEND=tensorflow
-        - python: 3.5
-          env: KERAS_BACKEND=tensorflow
-        - python: 3.6
-          env: KERAS_BACKEND=tensorflow
-
+python:
+  - '3.5'
+  - '3.6'
 install:
   # code below is taken from http://conda.pydata.org/docs/travis.html
   # We do this conditionally because it saves us some downloading if the
@@ -38,11 +29,7 @@ install:
 
   # Install package and test requirements.
   - pip install -e .[tests]
-
 script:
   - export MKL_THREADING_LAYER="GNU"
-  - if [[ "$TEST_MODE" == "PEP8" ]]; then
-      PYTHONPATH=$PWD:$PYTHONPATH py.test --pep8 -m pep8;
-    else
-      PYTHONPATH=$PWD:$PYTHONPATH/tests py.test;
-    fi
+  - PYTHONPATH=$PWD:$PYTHONPATH py.test --pep8 -m pep8
+  - PYTHONPATH=$PWD:$PYTHONPATH/tests py.test
