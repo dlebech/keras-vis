@@ -8,8 +8,8 @@ import tensorflow as tf
 
 from ..utils import utils
 from tensorflow.python.framework import ops
-from tf.keras.models import load_model
-from tf.keras.layers import advanced_activations, Activation
+from tensorflow.keras.models import load_model
+from tensorflow.keras.layers import advanced_activations, Activation
 
 
 # Register all classes with `advanced_activations` module

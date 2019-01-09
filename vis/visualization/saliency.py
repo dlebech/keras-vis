@@ -4,9 +4,9 @@ import numpy as np
 from scipy.ndimage.interpolation import zoom
 
 import tensorflow as tf
-from tf.keras.layers.convolutional import _Conv
-from tf.keras.layers.pooling import _Pooling1D, _Pooling2D, _Pooling3D
-from tf.keras.layers.wrappers import Wrapper
+from tensorflow.keras.layers.convolutional import _Conv
+from tensorflow.keras.layers.pooling import _Pooling1D, _Pooling2D, _Pooling3D
+from tensorflow.keras.layers.wrappers import Wrapper
 K = tf.keras.backend
 
 from ..losses import ActivationMaximization
