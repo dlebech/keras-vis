@@ -9,7 +9,8 @@ from .saliency import visualize_saliency
 from .saliency import visualize_cam_with_losses
 from .saliency import visualize_cam
 
-from keras import backend as K
+import tensorflow as tf
+K = tf.keras.backend
 
 
 def get_num_filters(layer):
